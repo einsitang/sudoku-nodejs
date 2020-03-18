@@ -294,7 +294,7 @@ class Sudoku {
 
                 indexObj.index.forEach((index)=>{
                     this.getZoneCandidate(matrix.getZone(index)).forEach((candidate)=>{
-                        if(type === 'row'){
+                        if(isRow){
                             if(matrix.getCol(index) === shaft){
                                 return
                             }
@@ -320,7 +320,7 @@ class Sudoku {
 
                 indexObj.index.forEach((index)=>{
                     this.getZoneCandidate(matrix.getZone(index)).forEach((candidate)=>{
-                        if(type === 'row'){
+                        if(isRow){
                             if(matrix.getCol(index) === shaft){
                                 return
                             }
