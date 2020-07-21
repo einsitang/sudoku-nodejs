@@ -13,7 +13,7 @@
 
 ## 安装
 
-npm i @forfuns/sudoku
+`npm i @forfuns/sudoku`
 
 ## 使用
 
