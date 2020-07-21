@@ -13,11 +13,7 @@
 
 ## 安装
 
-`yarn install`
-
-or
-
-`npm i`
+npm i @forfuns/sudoku
 
 ## 使用
 
@@ -25,7 +21,7 @@ or
 
 ```javascript 1.6
 // 9*9 矩阵数独题目，-1值为待输入值
-const source = [
+let source = [
     -1,-1,8,    9,-1,6,     -1,-1,5,
     -1,4,3,     -1,-1,-1,   -1,2,-1,
     -1,-1,-1,   -1,-1,-1,   -1,-1,-1,
@@ -38,7 +34,7 @@ const source = [
     -1,-1,-1,   -1,3,4,     1,-1,-1,
     -1,6,-1,    -1,-1,9,    -1,-1,-1,
 ]
-const { Sudoku , generator } = require('./index')
+const { Sudoku , generator } = require('@forfuns/sudoku')
 // 创建数独
 let sudoku = new Sudoku(source)
 // 获取原题目
@@ -48,8 +44,9 @@ sudoku.getAnswer()
 // 查看debug信息
 sudoku.debug()
 
+-----------------------------------------------------------------------------
 // 生成数独
-let source = generator(0) // level 可选 0 ~ 3 分别代表：简单 / 中等 / 困难 / 专家
+source = generator(0) // level 可选 0 ~ 3 分别代表：简单 / 中等 / 困难 / 专家
 ```
 
 ### web 程序
