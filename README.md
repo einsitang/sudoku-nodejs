@@ -6,7 +6,7 @@
 
 ## 计划
 - [√] 完整数独计算器 
-- [] 题目生成功能
+- [√] 题目生成功能
 - [] 可独立运行的h5应用
 - [] OCR扫描解题能力
 - [] 社交元素
@@ -38,7 +38,7 @@ const source = [
     -1,-1,-1,   -1,3,4,     1,-1,-1,
     -1,6,-1,    -1,-1,9,    -1,-1,-1,
 ]
-const Sudoku = require('../../src/sudoku/core')
+const { Sudoku , generator } = require('./index')
 // 创建数独
 let sudoku = new Sudoku(source)
 // 获取原题目
@@ -47,6 +47,9 @@ sudoku.getSource()
 sudoku.getAnswer()
 // 查看debug信息
 sudoku.debug()
+
+// 生成数独
+let source = generator(0) // level 可选 0 ~ 3 分别代表：简单 / 中等 / 困难 / 专家
 ```
 
 ### web 程序

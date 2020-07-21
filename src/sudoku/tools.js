@@ -1,4 +1,4 @@
-const range = (max, cb) => {
+const range = (max, cb = (i) => i) => {
     return [...Array(max).keys()].map(((num) => cb(num)))
 }
 const BIT_MAP = range(9, (num) => Math.pow(2, num))
@@ -27,18 +27,34 @@ const matrix = {
     },
     getIndex: (row, col) => {
         return col * 9 + row
+    },
+    getZoneIndexs: (zone = 0) => {
+        let rows = [0, 1, 2]
+        let cols = [0, 1, 2]
+        let indexs = []
+
+        for (let ci in cols) {
+            let col = cols[ci]
+
+            for (let ri in rows) {
+                let row = rows[ri]
+                indexs.push(((col + parseInt(zone / 3) * 3) * 9) + (row + (zone % 3) * 3))
+            }
+        }
+
+        return indexs
     }
 }
 
 const formatPrint = (arr) => {
     let matrix = []
     let rows = []
-    arr.forEach((num,index)=>{
-        if(index % 9 === 0){
+    arr.forEach((num, index) => {
+        if (index % 9 === 0) {
             rows = []
         }
         rows.push(num)
-        if(rows.length === 9 ){
+        if (rows.length === 9) {
             matrix.push(rows)
         }
     })

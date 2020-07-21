@@ -1,8 +1,8 @@
-const generate = require('./generator')
 const {matrix, range, formatPrint} = require('./tools')
 const NUMS = range(9, (num) => num + 1)
+const INVERSE_NUM = range(9, (num) => num + 1).reverse()
 
-const calculate = (answer, rows, cols, zones, index) => {
+const calculate = (answer, rows, cols, zones, index, reverse = false) => {
 
     let row = matrix.getRow(index)
     let col = matrix.getCol(index)
@@ -16,8 +16,9 @@ const calculate = (answer, rows, cols, zones, index) => {
     }
 
     let num
-    for (let n in NUMS) {
-        num = NUMS[n]
+    let iterateNums = reverse ? INVERSE_NUM : NUMS
+    for (let n in iterateNums) {
+        num = iterateNums[n]
         if (!rows[row][num] && !cols[col][num] && !zones[zone][num]) {
             answer[index] = num
             rows[row][num] = true
@@ -40,12 +41,9 @@ const calculate = (answer, rows, cols, zones, index) => {
 
 class Sudoku {
 
-    constructor(source) {
+    constructor(source, reverse = false) {
         this.source = source
 
-        if (!source) {
-            source = generate()
-        }
         if (!source || source.length != 81) {
             throw new Error('数独题目错误，不是 9 * 9 矩阵')
         }
@@ -73,12 +71,12 @@ class Sudoku {
         const timeBegin = new Date().getTime()
         for (let index = 0; index < 81; ++index) {
             if (answer[index] === -1) {
-                isSuccess = calculate(answer, rows, cols, zones, index)
+                isSuccess = calculate(answer, rows, cols, zones, index, reverse)
                 break
             }
         }
 
-        if(!isSuccess){
+        if (!isSuccess) {
             throw new Error('错误数独，无法计算')
         }
 
