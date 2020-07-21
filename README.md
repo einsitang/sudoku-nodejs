@@ -1,4 +1,4 @@
-# Sudoku.js
+# @forfuns/sudoku
 
 ## 关于
 
