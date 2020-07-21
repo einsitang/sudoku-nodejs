@@ -245,14 +245,14 @@ const generator = (fillRules) => {
     let answer1 = sudoku1.getAnswer()
 
     // 对完整数据做规则挖洞
-    let emptySource = range(81, () => -1)
+    let source = range(81, () => -1)
     fillIndexes.forEach((index) => {
-        emptySource[index] = answer1[index]
+        source[index] = answer1[index]
     })
 
     // 校验挖洞完毕的题目是否唯一解
-    let testSudoku1 = new Sudoku(emptySource)
-    let testSudoku2 = new Sudoku(emptySource, true)
+    let testSudoku1 = new Sudoku(source)
+    let testSudoku2 = new Sudoku(source, true)
 
     let testAnswer1 = testSudoku1.getAnswer()
     let testAnswer2 = testSudoku2.getAnswer()
@@ -263,7 +263,7 @@ const generator = (fillRules) => {
     }
 
     // 输出校验后的题目
-    return emptySource
+    return source
 }
 
 module.exports = (level = 0) => {
