@@ -25,7 +25,7 @@ const calculate = (answer, rows, cols, zones, index, reverse = false) => {
             cols[col][num] = true
             zones[zone][num] = true
 
-            if (calculate(answer, rows, cols, zones, index + 1)) {
+            if (calculate(answer, rows, cols, zones, index + 1,reverse)) {
                 return true
             } else {
                 answer[index] = -1
