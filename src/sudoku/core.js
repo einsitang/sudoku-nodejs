@@ -8,7 +8,7 @@ const calculate = (answer, rows, cols, zones, index, reverse = false) => {
     let col = matrix.getCol(index)
     let zone = matrix.getZone(index)
 
-    if (index > 81) {
+    if (index >= 81) {
         return true
     }
     if (answer[index] !== -1) {
