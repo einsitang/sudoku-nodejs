@@ -1,8 +1,9 @@
 const {matrix, range, formatPrint} = require('./tools')
 const NUMS = range(9, (num) => num + 1)
-const INVERSE_NUM = range(9, (num) => num + 1).reverse()
+// const INVERSE_NUM = range(9, (num) => num + 1).reverse()
+const lodash = require('lodash');
 
-const calculate = (answer, rows, cols, zones, index, reverse = false) => {
+const calculate = (answer, rows, cols, zones, index, traceBackNums) => {
 
     let row = matrix.getRow(index)
     let col = matrix.getCol(index)
@@ -12,20 +13,24 @@ const calculate = (answer, rows, cols, zones, index, reverse = false) => {
         return true
     }
     if (answer[index] !== -1) {
-        return calculate(answer, rows, cols, zones, index + 1)
+        return calculate(answer, rows, cols, zones, index + 1,traceBackNums)
     }
 
     let num
-    let iterateNums = reverse ? INVERSE_NUM : NUMS
+    let iterateNums = traceBackNums
+    // let iterateNums = reverse ? INVERSE_NUM : NUMS
+    // let iterateNums = traceBackNums
+    // console.log(iterateNums)
     for (let n in iterateNums) {
         num = iterateNums[n]
+        // console.log(`num : ${num} index : ${index}`)
         if (!rows[row][num] && !cols[col][num] && !zones[zone][num]) {
             answer[index] = num
             rows[row][num] = true
             cols[col][num] = true
             zones[zone][num] = true
 
-            if (calculate(answer, rows, cols, zones, index + 1,reverse)) {
+            if (calculate(answer, rows, cols, zones, index + 1,iterateNums)) {
                 return true
             } else {
                 answer[index] = -1
@@ -41,7 +46,7 @@ const calculate = (answer, rows, cols, zones, index, reverse = false) => {
 
 class Sudoku {
 
-    constructor(source, reverse = false) {
+    constructor(source) {
         this.source = source
 
         if (!source || source.length != 81) {
@@ -69,9 +74,10 @@ class Sudoku {
 
         let isSuccess = true
         const timeBegin = new Date().getTime()
+        let traceBackNums = lodash.shuffle(NUMS)
         for (let index = 0; index < 81; ++index) {
             if (answer[index] === -1) {
-                isSuccess = calculate(answer, rows, cols, zones, index, reverse)
+                isSuccess = calculate(answer, rows, cols, zones, index, traceBackNums)
                 break
             }
         }

@@ -4,6 +4,7 @@
 const {Sudoku,generator} = require('../../index')
 
 let level = parseInt(Math.random() * 4)
+level = 3
 console.debug(`数独难度 level : ${level}`)
 let source = generator(level)
 let sudoku = new Sudoku(source)

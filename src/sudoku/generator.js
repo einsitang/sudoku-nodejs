@@ -252,7 +252,7 @@ const generator = (fillRules) => {
 
     // 校验挖洞完毕的题目是否唯一解
     let testSudoku1 = new Sudoku(source)
-    let testSudoku2 = new Sudoku(source, true)
+    let testSudoku2 = new Sudoku(source)
 
     let testAnswer1 = testSudoku1.getAnswer()
     let testAnswer2 = testSudoku2.getAnswer()
@@ -278,11 +278,13 @@ module.exports = (level = 0) => {
 
     let source
     console.time("generator")
+    // let tryCount = 0
     while (!source) {
         try {
             source = generator(fillRules)
         } catch (e) {
             // retry
+            // console.log(`tryCount : ${++tryCount}`)
         }
     }
     console.timeEnd("generator")
