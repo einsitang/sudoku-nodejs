@@ -38,7 +38,7 @@ const { Sudoku , generator } = require('@forfuns/sudoku')
 // 创建数独
 let sudoku = new Sudoku(source)
 // 获取原题目
-sudoku.getSource()
+sudoku.getPuzzle()
 // 获取完整答案
 sudoku.getAnswer()
 // 查看debug信息
