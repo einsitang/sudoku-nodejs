@@ -1,7 +1,6 @@
 const range = (max, cb = (i) => i) => {
     return [...Array(max).keys()].map(((num) => cb(num)))
 }
-const BIT_MAP = range(9, (num) => Math.pow(2, num))
 
 const matrix = {
     getRow: (index) => {
@@ -21,8 +20,8 @@ const matrix = {
         row = matrix.getRow(index)
         col = matrix.getCol(index)
 
-        let x = parseInt(row / 3)
-        let y = parseInt(col / 3)
+        let x = parseInt(col / 3)
+        let y = parseInt(row / 3)
         return y * 3 + x
     },
     getIndex: (row, col) => {
@@ -64,6 +63,5 @@ const formatPrint = (arr) => {
 module.exports = {
     range,
     matrix,
-    formatPrint,
-    BIT_MAP
+    formatPrint
 }

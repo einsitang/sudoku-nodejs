@@ -1,9 +1,8 @@
 const {matrix, range, formatPrint} = require('./tools')
 const NUMS = range(9, (num) => num + 1)
-// const INVERSE_NUM = range(9, (num) => num + 1).reverse()
 const lodash = require('lodash');
 
-const calculate = (answer, rows, cols, zones, index, traceBackNums) => {
+const calculate = (answer, rows, cols, zones, index,traceBackNums) => {
 
     let row = matrix.getRow(index)
     let col = matrix.getCol(index)
@@ -17,7 +16,7 @@ const calculate = (answer, rows, cols, zones, index, traceBackNums) => {
     }
 
     let num
-    let iterateNums = traceBackNums
+    let iterateNums = lodash.shuffle(NUMS);
     // let iterateNums = reverse ? INVERSE_NUM : NUMS
     // let iterateNums = traceBackNums
     // console.log(iterateNums)
@@ -90,7 +89,7 @@ class Sudoku {
         this.timecount = (new Date().getTime() - timeBegin)
     }
 
-    getSource() {
+    getPuzzle() {
         return this.source
     }
 
@@ -100,8 +99,8 @@ class Sudoku {
 
     debug() {
         console.log('--- debug info ---')
-        console.log('source')
-        formatPrint(this.getSource())
+        console.log('puzzle')
+        formatPrint(this.getPuzzle())
         console.log('answer')
         formatPrint(this.getAnswer())
         console.log(`耗时 : ${this.timecount}'ms`)

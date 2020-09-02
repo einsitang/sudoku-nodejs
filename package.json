@@ -1,8 +1,8 @@
 {
   "name": "@forfuns/sudoku",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "sudoku",
-  "homepage": "https://github.com/forfuns/sudoku#README",
+  "homepage": "https://github.com/forfuns/sudoku-nodejs#README",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
