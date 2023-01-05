@@ -280,11 +280,11 @@ module.exports = (level = 0) => {
     console.time("generator")
     // let tryCount = 0
     while (!source) {
+        // retry
         try {
             source = generator(fillRules)
         } catch (e) {
-            // retry
-            // console.log(`tryCount : ${++tryCount}`)
+            
         }
     }
     console.timeEnd("generator")
