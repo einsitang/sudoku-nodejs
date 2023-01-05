@@ -6,9 +6,12 @@
 
 opensource sudoku calculator and puzzle generator
 
+
 ## 功能 feature
+
 - [√] 完整数独计算器 - complete Sudoku calculator
 - [√] 题目生成功能 - puzzle generator with four level
+
 
 ## 安装 install
 
@@ -16,7 +19,7 @@ opensource sudoku calculator and puzzle generator
 
 ## 使用 tutorial
 
-### sudoku 库
+### resolve and generate
 
 ```javascript 1.6
 // 9 * 9 矩阵数独题目，-1值为待输入值
@@ -54,7 +57,7 @@ sudoku.debug()
 
 -----------------------------------------------------------------------------
 // 数独题目生成
-// make puzzle with genarator function , four level 0:easy / 1:medium / 2:hard / 3:expert
+// make puzzle with generate function , four level 0:easy / 1:medium / 2:hard / 3:expert
 source = generator(0) // level 可选 0 ~ 3 分别代表：简单 / 中等 / 困难 / 专家
 ```
 

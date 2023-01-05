@@ -1,6 +1,6 @@
 /**
  * 数独生成器测试工具
- * generator sudoku puzzle
+ * generate sudoku puzzle
  */
 const {
   Sudoku,
