@@ -17,9 +17,6 @@ const calculate = (answer, rows, cols, zones, index,traceBackNums) => {
 
     let num
     let iterateNums = lodash.shuffle(NUMS);
-    // let iterateNums = reverse ? INVERSE_NUM : NUMS
-    // let iterateNums = traceBackNums
-    // console.log(iterateNums)
     for (let n in iterateNums) {
         num = iterateNums[n]
         // console.log(`num : ${num} index : ${index}`)
