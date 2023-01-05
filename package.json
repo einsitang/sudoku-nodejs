@@ -1,6 +1,6 @@
 {
   "name": "@forfuns/sudoku",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "sudoku",
   "homepage": "https://github.com/forfuns/sudoku-nodejs#README",
   "main": "index.js",
