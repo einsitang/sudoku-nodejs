@@ -64,4 +64,4 @@ with any idea welcome open issue to make me know , same lib with go / dart and f
 
 - [einsitang/sudoku-go](https://github.com/einsitang/sudoku-go)
 - [einsitang/sudoku-dart](https://github.com/einsitang/sudoku-dart)
-- [einsitang/udoku-flutter](https://github.com/einsitang/sudoku-flutter)
+- [einsitang/sudoku-flutter](https://github.com/einsitang/sudoku-flutter)
