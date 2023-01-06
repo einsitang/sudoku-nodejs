@@ -1,10 +1,14 @@
 # @forfuns/sudoku
 
+
+
 ## 关于 about
 
-一个开源数独 **计算器** / **生成器**
+[![npm version](https://badge.fury.io/js/@forfuns%2Fsudoku.svg)](https://www.npmjs.com/package/@forfuns/sudoku)
 
-opensource sudoku calculator and puzzle generator
+一款基于javascript / nodejs 开源的数独 **计算器** 和 **生成器** 依赖库
+
+opensource sudoku calculator and puzzle generator javascript/nodejs library
 
 
 ## 功能 feature
@@ -63,7 +67,9 @@ source = generator(0) // level 可选 0 ~ 3 分别代表：简单 / 中等 / 困
 
 更多用法正在设计中，感兴趣可以先了解 `/test/sudoku/sudokuTest.js` 提供的测试用例
 
-with any idea welcome open issue to make me know , same lib with go / dart and flutter app
+with any idea welcome open issue to make me know 
+
+if you want same project with other language like  `go` / `dart` and `flutter app` , here they are : 
 
 - [einsitang/sudoku-go](https://github.com/einsitang/sudoku-go)
 - [einsitang/sudoku-dart](https://github.com/einsitang/sudoku-dart)
