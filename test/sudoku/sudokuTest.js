@@ -1,6 +1,6 @@
 /**
  * 数独生成器测试工具
- * resolve puzzle with expert level
+ * solve puzzle with expert level
  */
 // const puzzle = [
 //   -1, -1, 8, 9, -1, 6, -1, -1, 5,

@@ -1,13 +1,14 @@
 {
   "name": "@forfuns/sudoku",
-  "version": "1.1.5",
-  "description": "sudoku",
+  "version": "1.1.7",
+  "description": "sudoku solver and generator",
   "homepage": "https://github.com/einsitang/sudoku-nodejs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/einsitang/sudoku-nodejs.git"
   },
   "keywords": [
+    "sudoku solver",
     "sudoku calculator",
     "sudoku generator",
     "sudoku with nodejs",
@@ -15,7 +16,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test-resolve":"node ./test/sudoku/sudokuTest.js",
+    "test-solver":"node ./test/sudoku/sudokuTest.js",
     "test-generator":"node ./test/sudoku/sudokuGeneratorTest.js"
   },
   "author": "einsitang <my-tangjianbin@163.com> (https://github.com/einsitang)",

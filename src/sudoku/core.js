@@ -105,7 +105,7 @@ class Sudoku {
     formatPrint(this.getPuzzle())
     console.log('answer')
     formatPrint(this.getAnswer())
-    console.log(`resolve puzzle total time : ${this.timecount}'ms`)
+    console.log(`solve puzzle total time : ${this.timecount}'ms`)
     console.log('--- debug end ---')
   }
 }
