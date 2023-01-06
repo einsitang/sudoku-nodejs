@@ -1,10 +1,10 @@
 const {
   matrix,
   range,
+  shuffle,
   formatPrint
 } = require('./tools')
 const NUMS = range(9, (num) => num + 1)
-const lodash = require('lodash');
 
 const calculate = (answer, rows, cols, zones, index, traceBackNums) => {
 
@@ -20,7 +20,7 @@ const calculate = (answer, rows, cols, zones, index, traceBackNums) => {
   }
 
   let num
-  let iterateNums = lodash.shuffle(NUMS);
+  let iterateNums = shuffle(NUMS);
   for (let n in iterateNums) {
     num = iterateNums[n]
 
@@ -75,7 +75,7 @@ class Sudoku {
 
     let isSuccess = true
     const timeBegin = new Date().getTime()
-    let traceBackNums = lodash.shuffle(NUMS)
+    let traceBackNums = shuffle(NUMS)
     for (let index = 0; index < 81; ++index) {
       if (answer[index] === -1) {
         isSuccess = calculate(answer, rows, cols, zones, index, traceBackNums)
@@ -84,7 +84,7 @@ class Sudoku {
     }
 
     if (!isSuccess) {
-      throw new Error('错误数独，无法计算')
+      throw new Error('not found the solution. is that you give me the puzzle with mistake?')
     }
 
     this.answer = answer

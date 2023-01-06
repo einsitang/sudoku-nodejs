@@ -1,14 +1,9 @@
-/**
- * 数读生成器
- * @param level
- * @author EinsiTang
- */
 const {
   matrix,
-  range
+  range,
+  shuffle
 } = require('./tools')
 const Sudoku = require('./core')
-const lodash = require('lodash');
 
 // 简单级别填充规则
 const easy = [{
@@ -173,7 +168,7 @@ class NumPool {
 
   nums() {
     let originNums = range(9, (i) => i + 1)
-    originNums = lodash.shuffle(originNums)
+    originNums = shuffle(originNums)
     let nums = []
     originNums.forEach((num) => {
       let numMeta = this.meta[num]
@@ -261,6 +256,11 @@ const generator = (fillRules) => {
   return puzzle
 }
 
+/**
+ * 数读生成器
+ * @param level
+ * @author EinsiTang
+ */
 module.exports = (level = 0) => {
   // 生成数独题目
   let levelRules = RULE_LEVEL[level]
