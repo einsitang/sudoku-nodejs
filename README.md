@@ -61,7 +61,7 @@ sudoku.debug()
 source = generator(0) // level 可选 0 ~ 3 分别代表：简单 / 中等 / 困难 / 专家
 ```
 
-更多用法正在设计中，感兴趣可以先了解 `/test/sudoku./sudokuTest.js` 提供的测试用例
+更多用法正在设计中，感兴趣可以先了解 `/test/sudoku/sudokuTest.js` 提供的测试用例
 
 with any idea welcome open issue to make me know , same lib with go / dart and flutter app
 

@@ -1,23 +1,24 @@
 {
   "name": "@forfuns/sudoku",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "sudoku",
-  "homepage": "https://github.com/forfuns/sudoku-nodejs",
+  "homepage": "https://github.com/einsitang/sudoku-nodejs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/forfuns/sudoku-nodejs.git"
+    "url": "git+https://github.com/einsitang/sudoku-nodejs.git"
   },
   "keywords": [
     "sudoku calculator",
     "sudoku generator",
-    "sudoku with nodejs"
+    "sudoku with nodejs",
+    "sudoku with javscript"
   ],
   "main": "index.js",
   "scripts": {
     "test-resolve":"node ./test/sudoku/sudokuTest.js",
     "test-generator":"node ./test/sudoku/sudokuGeneratorTest.js"
   },
-  "author": "forfuns",
+  "author": "einsitang <my-tangjianbin@163.com> (https://github.com/einsitang)",
   "license": "Apache-2.0",
   "dependencies": {
   },
