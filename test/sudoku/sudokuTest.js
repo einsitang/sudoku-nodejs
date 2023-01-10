@@ -16,14 +16,26 @@ const isEquals = (sudoku1, sudoku2) => {
 }
 
 // use puzzle if you want
+let puzzle = [
+  -1, -1, 8, 9, -1, 6, -1, -1, 5,
+  -1, 4, 3, -1, -1, -1, -1, 2, -1,
+  -1, -1, -1, -1, -1, -1, -1, -1, -1,
 
+  -1, -1, 4, -1, -1, -1, 9, -1, -1,
+  5, -1, -1, -1, 4, -1, 6, 8, -1,
+  -1, -1, -1, 1, -1, -1, -1, -1, -1,
+
+  2, -1, -1, -1, 8, -1, -1, 7, -1,
+  -1, -1, -1, -1, 3, 4, 1, -1, -1,
+  -1, 6, -1, -1, -1, 9, -1, -1, -1,
+]
 // puzzleFromGo variable data is generated from sudoku-go
 // sudoku-go github repository : https://github.com/einsitang/sudoku-go
 // const puzzleFromGo = [-1, 8, -1, 9, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 2, -1, 9, -1, -1, -1, 5, 4, -1, -1, -1, -1, 8, 8, -1, -1, -1, 4, -1, -1, -1, 6, -1, -1, 1, -1, -1, 5, 2, -1, -1, 6, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 7, -1, -1, 6, 5, -1, 4, 3, -1, -1, -1, 5, 7, 6, -1, -1, -1, -1, -1, -1, -1, -1, 8, -1, -1]
 const puzzleFromGo = [-1, -1, 1, 2, 6, -1, 9, -1, -1, -1, -1, -1, -1, 4, -1, -1, 3, -1, -1, -1, 8, 7, -1, -1, 2, -1, -1, -1, 7, -1, -1, 3, 4, -1, -1, -1, -1, -1, 9, -1, -1, -1, 6, 7, -1, -1, -1, -1, -1, -1, 9, -1, -1, -1, -1, -1, -1, 4, -1, -1, -1, -1, 3, -1, -1, -1, -1, -1, -1, 1, 2, -1, 8, 9, 6, -1, -1, -1, -1, -1, -1]
 const Sudoku = require('../../src/sudoku/core')
 let sudoku, verifySudoku
-sudoku = new Sudoku(puzzleFromGo, true)
+sudoku = new Sudoku(puzzle, true)
 sudoku.debug()
 // console.log('begin do more try')
 // let tryCount = 0
