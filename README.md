@@ -4,7 +4,7 @@
 
 ## 关于 about
 
-[![npm version](https://badge.fury.io/js/@forfuns%2Fsudoku.svg)](https://www.npmjs.com/package/@forfuns/sudoku) [![License](https://img.shields.io/badge/License-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)[![Page Views Count](https://badges.toozhao.com/badges/01GP5GHAP2TBZPP5WKKMABME0K/blue.svg)](https://badges.toozhao.com/stats/01GP5GHAP2TBZPP5WKKMABME0K "sudoku-nodejs")
+[![npm version](https://badge.fury.io/js/@forfuns%2Fsudoku.svg)](https://www.npmjs.com/package/@forfuns/sudoku) [![License](https://img.shields.io/badge/License-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Page Views Count](https://badges.toozhao.com/badges/01GP5GHAP2TBZPP5WKKMABME0K/blue.svg)](https://badges.toozhao.com/stats/01GP5GHAP2TBZPP5WKKMABME0K "sudoku-nodejs")
 
 
 一款基于javascript / nodejs 开源的数独 **计算器** 和 **生成器** 依赖库
