@@ -4,7 +4,8 @@
 
 ## 关于 about
 
-[![npm version](https://badge.fury.io/js/@forfuns%2Fsudoku.svg)](https://www.npmjs.com/package/@forfuns/sudoku) [![License](https://img.shields.io/badge/License-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![npm version](https://badge.fury.io/js/@forfuns%2Fsudoku.svg)](https://www.npmjs.com/package/@forfuns/sudoku) [![License](https://img.shields.io/badge/License-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)[![Page Views Count](https://badges.toozhao.com/badges/01GP5GHAP2TBZPP5WKKMABME0K/blue.svg)](https://badges.toozhao.com/stats/01GP5GHAP2TBZPP5WKKMABME0K "sudoku-nodejs")
+
 
 一款基于javascript / nodejs 开源的数独 **计算器** 和 **生成器** 依赖库
 
@@ -23,9 +24,10 @@ opensource sudoku calculator and puzzle generator javascript/nodejs library
 
 ## 使用 tutorial
 
-### resolve and generate
+### Solver & Generator
 
 ```javascript 1.6
+// Solver
 // 9 * 9 矩阵数独题目，-1值为待输入值
 // 9 * 9 matrix for the puzzle , -1 mean input position
 let puzzle = [
@@ -67,9 +69,10 @@ sudoku.getAnswer()
 sudoku.debug()
 
 -----------------------------------------------------------------------------
+// Generator
 // 数独题目生成
 // make puzzle with generate function , four level 0:easy / 1:medium / 2:hard / 3:expert
-source = generator(0) // level 可选 0 ~ 3 分别代表：简单 / 中等 / 困难 / 专家
+puzzle = generator(0) // level 可选 0 ~ 3 分别代表：简单 / 中等 / 困难 / 专家
 ```
 
 相关测试用例，请查看 `/test/sudoku/*.js` 
