@@ -7,10 +7,13 @@ const {
   generator
 } = require('../../index')
 
-const level = parseInt(Math.random() * 4)
+// const level = parseInt(Math.random() * 4)
+const level = 3
 console.debug(`数独难度 level : ${level}`)
 console.time("generator")
-const source = generator(level)
+const puzzle = generator(level)
 console.timeEnd("generator")
-let sudoku = new Sudoku(source)
+let sudoku = new Sudoku(puzzle)
 sudoku.debug()
+console.log('this is puzzle can be copy to the clipboard : ')
+console.log(sudoku.getPuzzle().join(','))

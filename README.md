@@ -4,17 +4,17 @@
 
 ## 关于 about
 
-[![npm version](https://badge.fury.io/js/@forfuns%2Fsudoku.svg)](https://www.npmjs.com/package/@forfuns/sudoku)
+[![npm version](https://badge.fury.io/js/@forfuns%2Fsudoku.svg)](https://www.npmjs.com/package/@forfuns/sudoku) [![License](https://img.shields.io/badge/License-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 一款基于javascript / nodejs 开源的数独 **计算器** 和 **生成器** 依赖库
 
 opensource sudoku calculator and puzzle generator javascript/nodejs library
 
 
-## 功能 feature
+## 功能 features
 
-- [√] 完整数独计算器 - complete Sudoku calculator
-- [√] 题目生成功能 - puzzle generator with four level
+- [√] 完整数独解题器 - complete Sudoku solver
+- [√] 题目生成功能 -  random one solution puzzle generator with four level
 
 
 ## 安装 install
@@ -28,7 +28,7 @@ opensource sudoku calculator and puzzle generator javascript/nodejs library
 ```javascript 1.6
 // 9 * 9 矩阵数独题目，-1值为待输入值
 // 9 * 9 matrix for the puzzle , -1 mean input position
-let source = [
+let puzzle = [
     -1,-1,8,    9,-1,6,     -1,-1,5,
     -1,4,3,     -1,-1,-1,   -1,2,-1,
     -1,-1,-1,   -1,-1,-1,   -1,-1,-1,
@@ -43,9 +43,16 @@ let source = [
 ]
 const { Sudoku , generator } = require('@forfuns/sudoku')
 
-// 创建数独
-// make sudo with source(A.K.A puzzle)
-let sudoku = new Sudoku(source)
+let sudoku 
+// 数独解题(不区分是否唯一数独,回溯出结果直接返回)
+// make sudo with puzzle
+sudoku = new Sudoku(puzzle)
+
+// 数独解题 只能计算唯一解的数独，如果该puzzle拥有多解，则抛出错误Error('puzzle is not one-solution sudoku')
+// 一般来说,只是单纯解题,使用上面的构造器即可,速度最快
+// if you need to sure puzzle is one solution or not , you can use strict=true (default:false)
+// if puzzle is not one solution sudoku , will throw Error('puzzle is not one-solution sudoku')
+sudoku = new Sudoku(puzzle,true) 
 
 // 获取原题目
 // get origin puzzle
@@ -65,7 +72,9 @@ sudoku.debug()
 source = generator(0) // level 可选 0 ~ 3 分别代表：简单 / 中等 / 困难 / 专家
 ```
 
-更多用法正在设计中，感兴趣可以先了解 `/test/sudoku/sudokuTest.js` 提供的测试用例
+相关测试用例，请查看 `/test/sudoku/*.js` 
+
+
 
 with any idea welcome open issue to make me know 
 
