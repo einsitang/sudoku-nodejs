@@ -45,6 +45,10 @@ const backtrackCalculate = (answer, rows, cols, zones, index, traceBackNums) => 
 
 const dsfOneSolutionCalculate = (answer, rows, cols, zones, index, traceBackNums, mark) => {
 
+  if (mark.finishes > 1) {
+    return
+  }
+
   if (index >= 81) {
     for (let i = 0; i < answer.length; ++i) {
       if (answer[i] == -1) {
@@ -56,16 +60,12 @@ const dsfOneSolutionCalculate = (answer, rows, cols, zones, index, traceBackNums
     return
   }
 
-  if (mark.finishes > 1) {
-    return
-  }
-
   let row = matrix.getRow(index)
   let col = matrix.getCol(index)
   let zone = matrix.getZone(index)
 
   if (answer[index] !== -1) {
-    dsfOneSolutionCalculate([...answer], [...rows], [...cols], [...zones], index + 1, traceBackNums, mark)
+    dsfOneSolutionCalculate(answer, rows, cols, zones, index + 1, traceBackNums, mark)
     return
   }
 

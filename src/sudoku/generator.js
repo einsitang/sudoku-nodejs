@@ -87,7 +87,7 @@ module.exports = (level = 0) => {
       digHoleCount = 45
       break
     case 2:
-      digHoleCount = 52
+      digHoleCount = 50
       break
     case 3:
       digHoleCount = 54
