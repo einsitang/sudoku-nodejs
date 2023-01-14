@@ -8,7 +8,7 @@ const Sudoku = require('./core')
 
 const internalGenerate = (digHolePuzzle, digHoleCount) => {
   // random candidate indexes each try dig hole operation
-  let fixedPositions = range(9, (num) => matrix.getZoneIndexs()[Math.random(9)])
+  let fixedPositions = range(9, (num) => matrix.getZoneIndexs(num)[Math.random(9)]).sort()
 
   let arr = []
   digHolePuzzle.map((_, index) => {
