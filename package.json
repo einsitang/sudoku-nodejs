@@ -16,15 +16,13 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test-solver":"node ./test/sudoku/sudokuTest.js",
-    "test-generator":"node ./test/sudoku/sudokuGeneratorTest.js"
+    "test-solver": "node ./test/sudoku/sudokuTest.js",
+    "test-generator": "node ./test/sudoku/sudokuGeneratorTest.js"
   },
   "author": "einsitang <my-tangjianbin@163.com> (https://github.com/einsitang)",
   "license": "Apache-2.0",
-  "dependencies": {
-  },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.19.0"
+    "eslint": "^7.5.2",
+    "eslint-plugin-react": "^7.25.3"
   }
 }
