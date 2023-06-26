@@ -9,7 +9,7 @@
 
 一款基于javascript / nodejs 开源的数独 **计算器** 和 **生成器** 依赖库
 
-opensource sudoku calculator and puzzle generator javascript/nodejs library
+opensource sudoku calculator and generator with `javascript`/`nodejs` library
 
 
 ## 功能 features
@@ -47,21 +47,21 @@ const { Sudoku , generator } = require('@forfuns/sudoku')
 
 let sudoku 
 // 数独解题(不区分是否唯一数独,回溯出结果直接返回)
-// make sudo with puzzle
+// solve sudoku with puzzle
 sudoku = new Sudoku(puzzle)
 
 // 数独解题 只能计算唯一解的数独，如果该puzzle拥有多解，则抛出错误Error('puzzle is not one-solution sudoku')
 // 一般来说,只是单纯解题,使用上面的构造器即可,速度最快
-// if you need to sure puzzle is one solution or not , you can use strict=true (default:false)
+// if you need to sure puzzle is one solution or not , you can use strict=true (default is false), that will take longer
 // if puzzle is not one solution sudoku , will throw Error('puzzle is not one-solution sudoku')
-sudoku = new Sudoku(puzzle,true) 
+sudoku = new Sudoku(puzzle, true) 
 
 // 获取原题目
-// get origin puzzle
+// get sudoku puzzle
 sudoku.getPuzzle()
 
 // 获取完整答案
-// get full sudoku with answer
+// get full sudoku with answer(solution)
 sudoku.getAnswer()
 
 // 查看debug信息
@@ -76,6 +76,11 @@ puzzle = generator(0) // level 可选 0 ~ 3 分别代表：简单 / 中等 / 困
 ```
 
 相关测试用例，请查看 `/test/sudoku/*.js` 
+
+```
+npm run test-solver
+npm run test-generator
+```
 
 
 

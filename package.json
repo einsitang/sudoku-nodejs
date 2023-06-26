@@ -1,6 +1,6 @@
 {
   "name": "@forfuns/sudoku",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "sudoku solver and generator",
   "homepage": "https://github.com/einsitang/sudoku-nodejs",
   "repository": {
@@ -8,11 +8,13 @@
     "url": "git+https://github.com/einsitang/sudoku-nodejs.git"
   },
   "keywords": [
+    "sudoku",
     "sudoku solver",
     "sudoku calculator",
     "sudoku generator",
     "sudoku with nodejs",
-    "sudoku with javscript"
+    "sudoku with javscript",
+    "one-solution sudoku"
   ],
   "main": "index.js",
   "scripts": {
