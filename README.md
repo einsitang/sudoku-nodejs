@@ -9,13 +9,13 @@
 
 一款基于javascript / nodejs 开源的数独 **计算器** 和 **生成器** 依赖库
 
-opensource sudoku calculator and generator with `javascript`/`nodejs` library
+opensource sudoku solver and generator with `javascript`/`nodejs` library
 
 
 ## 功能 features
 
 - [√] 完整数独解题器 - complete Sudoku solver
-- [√] 题目生成功能 -  random one solution puzzle generator with four level
+- [√] 题目生成功能 -  random one-solution generator with five level
 
 
 ## 安装 install
@@ -61,8 +61,8 @@ sudoku = new Sudoku(puzzle, true)
 sudoku.getPuzzle()
 
 // 获取完整答案
-// get full sudoku with answer(solution)
-sudoku.getAnswer()
+// get sudoku solution
+sudoku.getSolution()
 
 // 查看debug信息
 // show debug infomation
@@ -71,8 +71,8 @@ sudoku.debug()
 -----------------------------------------------------------------------------
 // Generator
 // 数独题目生成
-// make puzzle with generate function , four level 0:easy / 1:medium / 2:hard / 3:expert
-puzzle = generator(0) // level 可选 0 ~ 3 分别代表：简单 / 中等 / 困难 / 专家
+// make puzzle with generate function , four level 0:easy / 1:medium / 2:hard / 3:expert / 4:hell(that may take long times)
+puzzle = generator(0) // level 可选 0 ~ 4 分别代表：简单 / 中等 / 困难 / 专家 / "地狱"
 ```
 
 相关测试用例，请查看 `/test/sudoku/*.js` 
