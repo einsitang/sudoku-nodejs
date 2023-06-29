@@ -4,6 +4,7 @@
 
 ## 关于 about
 
+[![codebeat badge](https://codebeat.co/badges/ab8e6ab6-5408-4065-9eff-b67fecf7cbf4)](https://codebeat.co/projects/github-com-einsitang-sudoku-nodejs-master)
 [![npm version](https://badge.fury.io/js/@forfuns%2Fsudoku.svg)](https://www.npmjs.com/package/@forfuns/sudoku) [![License](https://img.shields.io/badge/License-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Page Views Count](https://badges.toozhao.com/badges/01GP5GHAP2TBZPP5WKKMABME0K/blue.svg)](https://badges.toozhao.com/stats/01GP5GHAP2TBZPP5WKKMABME0K "sudoku-nodejs")
 
 
