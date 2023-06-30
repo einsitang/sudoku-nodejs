@@ -1,6 +1,6 @@
 {
   "name": "@forfuns/sudoku",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "sudoku solver and generator",
   "homepage": "https://github.com/einsitang/sudoku-nodejs",
   "repository": {
