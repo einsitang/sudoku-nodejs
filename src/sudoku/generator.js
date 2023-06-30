@@ -102,7 +102,7 @@ module.exports = (level = 0) => {
       digHoleCount = 58;
       break;
     default:
-      throw new Error(`please input level [0 - ${RULE_LEVEL.length}]`);
+      throw new Error(`please input level [0 - 4]`);
   }
 
   return generate(digHoleCount, 1);
