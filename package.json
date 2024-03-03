@@ -1,6 +1,6 @@
 {
   "name": "@forfuns/sudoku",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "sudoku solver and generator",
   "homepage": "https://github.com/einsitang/sudoku-nodejs",
   "repository": {
@@ -24,7 +24,6 @@
   "author": "einsitang <my-tangjianbin@163.com> (https://github.com/einsitang)",
   "license": "Apache-2.0",
   "devDependencies": {
-    "eslint": "^7.5.2",
-    "eslint-plugin-react": "^7.25.3"
+    "eslint": "^7.5.2"
   }
 }

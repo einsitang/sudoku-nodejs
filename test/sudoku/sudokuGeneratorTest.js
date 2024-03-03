@@ -8,7 +8,7 @@ const {
 } = require('../../index')
 
 // const level = parseInt(Math.random() * 4)
-const level = 3
+const level = 4
 console.debug(`数独难度 level : ${level}`)
 console.time("generator")
 const puzzle = generator(level)

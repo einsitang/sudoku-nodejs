@@ -1,4 +1,4 @@
-const { matrix, range, shuffle, formatPrint } = require("./tools");
+const { matrix, range, shuffle } = require("./tools");
 const Sudoku = require("./core");
 
 const internalGenerate = (digHolePuzzle, digHoleCount) => {
@@ -33,7 +33,7 @@ const internalGenerate = (digHolePuzzle, digHoleCount) => {
       try {
         digHoleFulfill++;
         new Sudoku(digHolePuzzle, true);
-      } catch {
+      } catch (_) {
         digHolePuzzle[position] = old;
         digHoleFulfill--;
       }
@@ -48,11 +48,13 @@ const internalGenerate = (digHolePuzzle, digHoleCount) => {
 };
 
 // generator max job limit
-const MAX_JOB_COUNT_LIMIT = 6
+const MAX_JOB_COUNT_LIMIT = 4;
 const generate = (digHoleCount, jobCount) => {
   if (jobCount >= MAX_JOB_COUNT_LIMIT) {
     // internal generate do many times , reduce the difficulty
-    console.log(`reduce the difficulty : ${digHoleCount} -> ${digHoleCount - 2}`);
+    console.debug(
+      `reduce the difficulty : ${digHoleCount} -> ${digHoleCount - 2}`
+    );
     jobCount = 1;
     digHoleCount -= 2;
   }
@@ -69,7 +71,7 @@ const generate = (digHoleCount, jobCount) => {
 
   // solve the base puzzle with normal sudoku
   let baseSudoku = new Sudoku(simplePuzzle);
-  let baseAnswer = baseSudoku.getAnswer();
+  let baseAnswer = baseSudoku.getSolution();
 
   let puzzle = internalGenerate(baseAnswer, digHoleCount);
   if (puzzle == 0) {
@@ -84,19 +86,19 @@ const generate = (digHoleCount, jobCount) => {
  */
 module.exports = (level = 0) => {
   // level to make dig hold count
-  let digHoleCount = 40;
+  let digHoleCount = 38;
   switch (level) {
     case 0:
-      digHoleCount = 40;
+      digHoleCount = 38;
       break;
     case 1:
-      digHoleCount = 45;
+      digHoleCount = 43;
       break;
     case 2:
       digHoleCount = 50;
       break;
     case 3:
-      digHoleCount = 54;
+      digHoleCount = 55;
       break;
     case 4:
       digHoleCount = 58;
