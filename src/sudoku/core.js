@@ -1,4 +1,5 @@
-const { matrix, range, shuffle, formatPrint } = require("./tools");
+import { matrix, range, shuffle, formatPrint } from "./tools.js";
+
 const NUMS = range(9, (num) => num + 1);
 
 const backtrackCalculate = (
@@ -121,7 +122,7 @@ const dsfOneSolutionCalculate = (
   }
 };
 
-class Sudoku {
+export default class Sudoku {
   constructor(puzzle, strict = false) {
     this.puzzle = puzzle;
 
@@ -229,5 +230,3 @@ class Sudoku {
     console.log("--- debug end ---");
   }
 }
-
-module.exports = Sudoku;

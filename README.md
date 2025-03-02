@@ -44,7 +44,8 @@ let puzzle = [
     -1,-1,-1,   -1,3,4,     1,-1,-1,
     -1,6,-1,    -1,-1,9,    -1,-1,-1,
 ]
-const { Sudoku , generator } = require('@forfuns/sudoku')
+
+import { Sudoku , generator } from '@forfuns/sudoku'
 
 let sudoku 
 // 数独解题(不区分是否唯一数独,回溯出结果直接返回)

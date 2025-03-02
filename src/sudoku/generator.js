@@ -1,5 +1,5 @@
-const { matrix, range, shuffle } = require("./tools");
-const Sudoku = require("./core");
+import { matrix, range, shuffle } from "./tools.js";
+import Sudoku from "./core.js";
 
 const internalGenerate = (digHolePuzzle, digHoleCount) => {
   // random candidate indexes each try dig hole operation
@@ -84,7 +84,7 @@ const generate = (digHoleCount, jobCount) => {
  * @param level 0 - 4
  * @author EinsiTang
  */
-module.exports = (level = 0) => {
+export default (level = 0) => {
   // level to make dig hold count
   let digHoleCount = 38;
   switch (level) {

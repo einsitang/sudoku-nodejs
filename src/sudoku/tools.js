@@ -94,7 +94,6 @@ function copyArray(source, array) {
   return array
 }
 
-
 const formatPrint = (arr) => {
   let matrix = []
   let rows = []
@@ -110,7 +109,7 @@ const formatPrint = (arr) => {
   console.table(matrix)
 }
 
-module.exports = {
+export {
   range,
   matrix,
   shuffle,

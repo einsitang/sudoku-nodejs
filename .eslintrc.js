@@ -1,4 +1,5 @@
 module.exports = {
+  
   env: {
     browser: true,
     commonjs: true,
@@ -10,6 +11,7 @@ module.exports = {
     SharedArrayBuffer: "readonly",
   },
   parserOptions: {
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },

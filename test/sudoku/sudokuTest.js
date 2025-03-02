@@ -3,6 +3,8 @@
  * solve puzzle with expert level
  */
 
+import Sudoku from '../../src/sudoku/core.js'
+
 const isEquals = (sudoku1, sudoku2) => {
 
   let testAnswer1 = sudoku1.getAnswer()
@@ -32,7 +34,6 @@ let puzzle = [
 // puzzleFromGo variable data is generated from sudoku-go
 // sudoku-go github repository : https://github.com/einsitang/sudoku-go
 const puzzleFromGo = [2, 3, -1, -1, -1, 6, 7, -1, -1, -1, -1, -1, -1, 7, 8, 2, -1, 5, -1, -1, -1, 5, 2, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 6, -1, 1, -1, 9, -1, 2, -1, -1, -1, -1, -1, 6, 8, -1, -1, -1, -1, -1, -1, -1, 4, -1, 2, 6, -1, -1, -1, -1, -1, -1, -1, -1, 8, -1, -1, 4, -1, -1, -1, 6, -1, -1, 9, 4, 1, -1, -1]
-const Sudoku = require('../../src/sudoku/core')
 let sudoku, verifySudoku
 sudoku = new Sudoku(puzzle, true)
 sudoku.debug()

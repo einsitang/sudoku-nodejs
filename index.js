@@ -1,6 +1,4 @@
-const Sudoku = require('./src/sudoku/core')
-const generator = require('./src/sudoku/generator')
-module.exports = {
-  Sudoku,
-  generator
-}
+import Sudoku from './src/sudoku/core.js';
+import generator from './src/sudoku/generator.js';
+
+export { Sudoku, generator }
